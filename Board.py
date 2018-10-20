@@ -189,10 +189,12 @@ class Board:
         
     def print(self):
         '''Pretty prints the board'''
-        # TODO: Clean this up
-        s =  [[''] + self.column_names] + [[str(row_index + 1)] + [str(e) if e is not None else '-' for e in self.board[row_index]] for row_index in range(len(self.board))]
-        lens = [max(map(len, col)) for col in zip(*s)]
-        fmt = '\t'.join('{{:{}}}'.format(x) for x in lens)
-        table = [fmt.format(*row) for row in s]
+        # TODO: Clean this up more
+        output_data =  [[''] + self.column_names] \
+                + [[str(row_index + 1)] \
+                + [str(e) if e is not None else '-' for e in self.board[row_index]] for row_index in range(len(self.board))]
+        biggest_column_sizes = [max(map(len, col)) for col in zip(*output_data)]
+        output_format = '\t'.join('{{:{}}}'.format(x) for x in biggest_column_sizes)
+        output_table = [output_format.format(*row) for row in output_data]
         print('\n')
-        print('\n'.join(table))
+        print('\n'.join(output_table))
