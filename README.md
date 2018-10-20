@@ -13,11 +13,9 @@ The code does not use any external packages.
 
 In order to play the game, run
 
-```./play```
+```python play_game.py n```
 
-alternatively, you can also directly use
-
-```python play_game.py```
+Where `n` is the size of the board you want to use. If you leave out the `n`, it will default to a board size of 8. You can use a smaller board size to easily test out end-game mechanics.
 
 You will see the current state of the board, as well a prompt where you can alternately enter actions for each player. Player 0 is the black player and Player 1 is the white player. Please enter actions in the following format:
 
@@ -28,3 +26,7 @@ So for example, if it is Player 0's turn, and you want to put their piece on f5,
 ```f5```
 
 and press Enter.
+
+The sample_game.in file contains sample moves which runs a game of size 4 to completion. If you want to watch the game, you can run:
+
+```python play_game.py 4 < sample_game.in```
