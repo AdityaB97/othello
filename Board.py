@@ -1,16 +1,15 @@
-class Board:
-    # Static variables for the board
-    length = 8
-    row_names = [str(i) for i in range(1, length + 1)]
-    column_names = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-    
+import string
 
+class Board:
     ###############################################################################
     # Initialization and getter/setter methods
     ###############################################################################
 
 
-    def __init__(self):
+    def __init__(self, length=8):
+        self.length = length
+        self.row_names = [str(i) for i in range(1, self.length + 1)]
+        self.column_names = list(string.ascii_lowercase[:self.length])
         self.initialize()
         
 

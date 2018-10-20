@@ -1,9 +1,9 @@
 from Board import Board
 
 class OthelloGame:
-    def __init__(self):
+    def __init__(self, length=8):
         self.current_player = 0
-        self.board = Board()
+        self.board = Board(length)
         self.update_action_availability()
         
     ###############################################################################

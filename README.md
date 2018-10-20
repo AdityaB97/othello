@@ -5,6 +5,10 @@ To play, first ensure that you have Python 3.6 installed. If you have conda, one
 
 ```conda env create -f environment.yml```
 
+Followed by
+
+```source activate othello```
+
 The code does not use any external packages.
 
 In order to play the game, run
