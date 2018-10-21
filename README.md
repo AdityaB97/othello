@@ -18,3 +18,7 @@ So for example, if it is Player 0's turn, and you want to put their piece on f5,
 The sample_game.in file contains sample moves which runs a game of size 4 to completion. If you want to watch the game, you can run:
 
 ```python play_game.py 4 < sample_game.in```
+
+A note on the terminology I used in my code:
+- I used the word 'action' to refer to a move made by a player. Basically, an action is just a square on the board. However, in situations where I was validating the input format, I used the term 'position' instead, so that I didn't have to overload some of my method names.
+- I used the word 'sequence' to refer to a series of positions starting from one position and going in one direction along a row, column, or diagonal. So each square on the board can have up to 8 associated 'sequences' (less if it is a corner square). I check for outflanking by looking at each of the sequences for the action (read: position) proposed by the user, and checking if outflanking occurs in that direction.
