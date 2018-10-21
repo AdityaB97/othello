@@ -188,7 +188,7 @@ class Board:
     ###############################################################################
         
     def print(self):
-        '''Pretty prints the board'''
+        '''Prints the board with nice-looking formatting (evenly spaced columns, etc.)'''
         # TODO: Clean this up more
         output_data =  [[''] + self.column_names] \
                 + [[str(row_index + 1)] \

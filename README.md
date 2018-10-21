@@ -3,11 +3,7 @@ An implementation of the board game Othello.
 
 To play, first ensure that you have Python 3.6 installed. If you have conda, one way to do this is by running
 
-```conda env create -f environment.yml```
-
-Followed by
-
-```source activate othello```
+```conda env create -f environment.yml``` followed by ```source activate othello```
 
 The code does not use any external packages.
 

@@ -12,6 +12,7 @@ class OthelloGame:
     ###############################################################################
 
     def update_action_availability(self):
+        # Note: self.is_action_available is a tuple with a boolean for each player
         self.is_action_available = [self.board.has_available_action(player) for player in (0, 1)]
 
     def update_current_player(self):
@@ -55,11 +56,10 @@ class OthelloGame:
 
     
     def is_game_over(self):
-        # Note: self.is_action_available is a tuple with a boolean for each player
         return self.board.is_full() or (not any(self.is_action_available))
     
 
-    def end(self):
+    def end_game(self):
         winner = self.board.winning_player()
         if winner == None:
             print('The game has ended in a tie')
@@ -67,11 +67,11 @@ class OthelloGame:
             print(f'The game has ended. The winner is player {winner}')
     
     
-    def run(self):
+    def run_game(self):
         while True:
             try:
                 if self.is_game_over():
-                    self.end()
+                    self.end_game()
                     return
                 else:
                     print('\nHere is the current board:')

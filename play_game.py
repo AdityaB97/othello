@@ -9,4 +9,4 @@ if __name__ == "__main__":
 	
 	othello_game = OthelloGame(length=length)
 	print('Welcome to this game of Othello!')
-	othello_game.run()
+	othello_game.run_game()
